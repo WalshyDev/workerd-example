@@ -1,0 +1,22 @@
+{
+	"name": "workerd-example",
+	"version": "1.0.0",
+	"description": "This is an example Worker which can be ran with workerd",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"build": "esbuild --format=esm --bundle --outfile=dist/worker.mjs src/index.ts",
+		"dev": "npm run build && ./workerd serve config.capnp"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@cloudflare/workers-types": "^3.16.0",
+		"esbuild": "^0.15.9",
+		"typescript": "^4.8.3"
+	},
+	"dependencies": {
+		"hono": "^2.2.1"
+	}
+}
